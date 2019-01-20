@@ -1,25 +1,72 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header';
+import TodoList from './TodoList';
 
 class App extends Component {
+
+  id = 3;
+
+  state = {
+    todos: [
+      {
+        id: 0,
+        name: 'React 공부',
+        checked: true,
+      },
+      {
+        id: 1,
+        name: '네트워크 공부',
+        checked: false,
+      },
+      {
+        id: 2,
+        name: '책 읽기',
+        checked: false,
+      }
+    ],
+  };
+
+  handleCreatTodo = (text) => {
+    const newTodo = {
+      id: this.id++,
+      name: text,
+      checked: false,
+    };
+
+    this.setState({
+      todos: this.state.todos.concat(newTodo),
+    });
+  }
+
+  handleRemove = (id) => {
+    const nextTodos = this.state.todos.filter(todo => todo.id !== id);
+
+    this.setState({
+      todos: nextTodos,
+    });
+  }
+
+  handleCheck = (id) => {
+    const nextTodos = this.state.todos.map(todo => {
+      if(todo.id === id) {
+        return {
+          ...todo,
+          checked: !todo.checked,
+        };
+      } return todo;
+    });
+
+    this.setState({
+      todos: nextTodos,
+    });
+  }
+
   render() {
+    const { todos } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Header onSubmit={ this.handleCreatTodo } />
+        <TodoList todos={ todos } onRemove={ this.handleRemove } onCheck={ this.handleCheck }/>
       </div>
     );
   }
