@@ -64,7 +64,7 @@ class App extends Component {
   render() {
     const { todos } = this.state;
     return (
-      <div>
+      <div style={{ 'display': 'flex', 'flex-direction': 'column' }}>
         <Header onSubmit={ this.handleCreatTodo } />
         <TodoList todos={ todos } onRemove={ this.handleRemove } onCheck={ this.handleCheck }/>
       </div>

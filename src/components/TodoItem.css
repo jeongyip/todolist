@@ -1,0 +1,13 @@
+.item {
+  width: 30%;
+  display: flex;
+  margin: auto;
+}
+
+.check {
+  font-size: 2rem;
+}
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+}

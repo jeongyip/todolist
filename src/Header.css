@@ -1,13 +1,52 @@
 .container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   text-align: center;
+  background-image: linear-gradient(
+      to right,
+      red, #f06d06
+    );
+}
+
+.container input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  outline: none;
+  width: 90%;
+  padding: 8px;
+}
+
+.container button {
+  width: 28px;
+  height: 28px;
+  background-color: #FFFFFF;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f06d06;
+  border-radius: 28px;
+  border: none;
 }
 
 .title {
   font-size: 3rem;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .bar {
-  margin-top: 1rem;
+  display: flex;
+  border: 1px solid #e9ecef;
+  width: 400px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 32px;
+  margin: auto;
+  margin-top: 2rem;
 }

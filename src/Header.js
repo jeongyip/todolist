@@ -24,10 +24,10 @@ class Header extends Component {
     const { text } = this.state;
     return (
       <form className="container" onSubmit={ this.handleSubmit }>
-        <div className="title">TODO LIST</div>
+        <div className="title">/* T O D O   L I S T */</div>
         <div className="bar">
         <input value={ text } onChange={ this.handleChange }/>
-        <button type="submit">Add</button>
+        <button type="submit">+</button>
         </div>
       </form>
     );
