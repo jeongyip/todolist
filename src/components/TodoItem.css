@@ -1,9 +1,23 @@
 .item {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
   border: 1px solid #000;
   margin: 10px;
   padding: 16px;
+  cursor: pointer;
 }
+
+.remove {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1px;
+  padding-left: 4px;
+  background-color: white;
+  color: #f06d06;
+  opacity: 0;
+}
+
 .item.active {
   background-color: #e9ecef;
   color: white;
@@ -11,6 +25,9 @@
 .item:hover {
   background-color: #f06d06;
   color: white;
+}
+.item:hover .remove{
+  opacity: 1;
 }
 
 .check {
@@ -22,7 +39,4 @@
 .name {
   font-size: 2rem;
   font-weight: bold;
-}
-.remove {
-
 }
