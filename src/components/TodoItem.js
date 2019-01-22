@@ -6,11 +6,10 @@ class TodoItem extends Component {
     const { todo, onRemove, onCheck } = this.props;
 
     return (
-      <div className="item">
+      <div className={`item ${todo.checked&&'active'}`}>
         <div className="check" onClick={ () => onCheck(todo.id) }>&#10004;</div>
-        { todo.checked && <p>checked!</p> }
         <div className="name">{ todo.name }</div>
-        <div onClick={ () => onRemove(todo.id) }>지우기</div>
+        <div className="remove" onClick={ () => onRemove(todo.id) }>지우기</div>
       </div>
     );
   }

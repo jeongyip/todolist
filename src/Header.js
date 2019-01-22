@@ -24,7 +24,7 @@ class Header extends Component {
     const { text } = this.state;
     return (
       <form className="container" onSubmit={ this.handleSubmit }>
-        <div className="title">/* T O D O   L I S T */</div>
+        <div className="title">/* T O D O   C A R D */</div>
         <div className="bar">
         <input value={ text } onChange={ this.handleChange }/>
         <button type="submit">+</button>

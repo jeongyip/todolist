@@ -1,5 +1,7 @@
 .todolist {
-  display: flex;
-  flex-direction: column;
   margin-top: 16px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 180px 180px;
 }
