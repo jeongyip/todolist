@@ -1,5 +1,6 @@
 .todolist {
   margin-top: 16px;
+  margin-bottom: 16px;
   display: grid;
   justify-content: center;
   grid-template-columns: 300px 300px 300px;
